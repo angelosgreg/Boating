@@ -1,0 +1,2 @@
+class Skipper < ApplicationRecord
+end
