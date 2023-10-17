@@ -1,0 +1,4 @@
+<%= link_to "Add a Boat", new_boat_path, class: "lrg-blue-btn" %>
+<% @boats.each do |boat| %>
+<%= boat.name %>
+<% end %>
