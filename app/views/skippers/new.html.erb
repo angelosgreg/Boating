@@ -1,0 +1,15 @@
+<%= simple_form_for(@skipper) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs" style="width: 1000px;">
+    <%= f.input :firstname, placeholder: "Enter skipper's first name" %>
+    <%= f.input :lastname, placeholder: "Enter skipper's last name" %>
+    <%= f.input :money, placeholder: "Price per day" %>
+    <%= f.input :city, placeholder: "Town/city" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "" %>
+  </div>
+<% end %>
