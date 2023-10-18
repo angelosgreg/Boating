@@ -80,7 +80,7 @@ class SkippersController < ApplicationController
     end
 
     def skipper_params
-      params.require(:skipper).permit(:id,:name, :number_of_guests, :price, :location)
+      params.require(:skipper).permit(:id,:firstname, :lastname, :money, :city)
     end
 
     def set_skipper
