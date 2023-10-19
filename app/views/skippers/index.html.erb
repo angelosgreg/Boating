@@ -1,6 +1,7 @@
+
 <%= link_to "New Skipper", new_skipper_path, class: "lrg-blue-btn" %>
 <% @skippers.each do |skipper| %>
 <%= skipper.firstname %>
-<%= cl_image_tag skipper.photos, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag skipper.photo.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "Delete",skipper_path(skipper),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
 <% end %>
