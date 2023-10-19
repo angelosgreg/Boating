@@ -1,4 +1,6 @@
 <%= link_to "Add a Boat", new_boat_path, class: "lrg-blue-btn" %>
 <% @boats.each do |boat| %>
 <%= boat.name %>
+<%= cl_image_tag boat.images, height: 300, width: 400, crop: :fill %>
+<%= link_to "Delete",boat_path(boat),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
 <% end %>
