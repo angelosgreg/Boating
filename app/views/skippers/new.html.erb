@@ -7,6 +7,7 @@
     <%= f.input :lastname, placeholder: "Enter skipper's last name" %>
     <%= f.input :money, placeholder: "Price per day" %>
     <%= f.input :city, placeholder: "Town/city" %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   </div>
 
   <div class="form-actions">
