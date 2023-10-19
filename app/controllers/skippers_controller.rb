@@ -80,11 +80,11 @@ class SkippersController < ApplicationController
     end
 
     def skipper_params
-      params.require(:skipper).permit(:id,:firstname, :lastname, :money, :city)
+      params.require(:skipper).permit(:id,:firstname, :lastname, :money, :city, photos: [])
     end
 
     def set_skipper
-      @skipper = skipper.find(params[:id])
+      @skipper = Skipper.find(params[:id])
     end
 
     def map_skipper
