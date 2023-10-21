@@ -4,4 +4,7 @@
   background-size: cover;
   height: 720px;
   width: 100%;
+  display: flex;
+justify-content: center; /* Align horizontal */
+align-items: center; /* Align vertical */
 }
