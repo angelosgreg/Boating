@@ -1,7 +1,18 @@
-
 <%= link_to "Add a Boat", new_boat_path, class: "lrg-blue-btn" %>
-<% @boats.each do |boat| %>
-<%= boat.name %>
-<%= cl_image_tag boat.image.key, height: 300, width: 400, crop: :fill %>
-<%= link_to "Delete",boat_path(boat),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
-<% end %>
+<div class="row">
+    <% @boats.each do |boat| %>
+    <div class="col-md-4">
+      <div class="boat-card">
+      <%= cl_image_tag boat.image.key, height: 300, width: 400, crop: :fill %>
+         <div class="boat-card-content">
+            <h4><%= link_to boat.name, boat_path(boat), class: 'boat-card-title' %></h4>
+            <p style="height: 60px; overflow: hidden;"><%= boat.description%></p>
+            <p style="height: 60px; overflow: hidden;"><%= boat.capacity%></p>
+            <p style="height: 60px; overflow: hidden;"><%= boat.location%></p>
+            <p style="height: 60px; overflow: hidden;"><%= boat.price%>€</p>
+            <%= link_to "Delete",boat_path(boat),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
+            </div>
+          </div>
+    </div>
+  <% end %>
+</div>
