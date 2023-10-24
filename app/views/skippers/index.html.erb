@@ -1,7 +1,16 @@
-
-<%= link_to "New Skipper", new_skipper_path, class: "lrg-blue-btn" %>
-<% @skippers.each do |skipper| %>
-<%= skipper.firstname %>
-<%= cl_image_tag skipper.photo.key, height: 300, width: 400, crop: :fill %>
-<%= link_to "Delete",skipper_path(skipper),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
-<% end %>
+<%= link_to "Add a Skipper", new_skipper_path, class: "lrg-blue-btn" %>
+<div class="row">
+    <% @skippers.each do |skipper| %>
+    <div class="col-md-4">
+      <div class="skipper-card">
+      <%= cl_image_tag skipper.photo.key, height: 180, width: 320, crop: :fill,position: :center %>
+         <div class="skipper-card-content">
+            <h4><%= link_to skipper.firstname, skipper_path(skipper), class: 'skipper-card-title' %></h4>
+            <p style="height: 60px; overflow: hidden;"><%= skipper.info%></p>
+            <p style="height: 60px; overflow: hidden;"><%= skipper.city%></p>
+            <p style="height: 60px;  overflow: hidden;"><%= skipper.money%>€</p>
+            </div>
+          </div>
+    </div>
+  <% end %>
+</div>
