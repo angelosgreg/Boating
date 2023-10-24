@@ -1,0 +1,10 @@
+<div style="width:400px; margin:0 auto;", class = "show-card">
+        <%= cl_image_tag @skipper.photo.key, height: 200, width: 400, crop: :fill,position: :center %>
+              <p style="height: 60px; overflow: hidden;"><%= @skipper.firstname%></p>
+              <p style="height: 60px; overflow: hidden;"><%= @skipper.info%></p>
+              <p style="height: 60px; overflow: hidden;"><%= @skipper.city%></p>
+              <p style="height: 60px;  overflow: hidden;"><%= @skipper.money%>€</p>
+              <%= link_to "update skipper", edit_skipper_path(@skipper), class: "lrg-blue-btn"  %>
+              <%= button_to "Delete skipper", @skipper, class: "lrg-blue-btn", method: :delete %>
+
+</div>
