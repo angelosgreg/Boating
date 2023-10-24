@@ -47,12 +47,9 @@ class SkippersController < ApplicationController
     end
 
     def update
-      @skipper.user = current_user
-      if @skipper.update(skipper_params)
-        redirect_to skipper_path(@skipper), notice: 'Upadated successfully!', status: :see_other
-      else
-        render :edit
-      end
+      @skipper.update(skipper_params)
+      redirect_to skipper_path(@skipper), notice: 'Upadated successfully!', status: :see_other
+
     end
 
     def my_skippers
