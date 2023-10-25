@@ -1,9 +1,9 @@
-
+<div class ="edit_form">
 <%= simple_form_for(@skipper) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs" style="width: 1000px;">
+  <div class="form-inputs" style="width: 700px;">
     <%= f.input :firstname, placeholder: "Enter skipper's first name" %>
     <%= f.input :lastname, placeholder: "Enter skipper's last name" %>
     <%= f.input :info, placeholder: "Enter skipper's description" %>
@@ -16,3 +16,4 @@
     <%= f.button :submit, class: "lrg-blue-btn" %>
   </div>
 <% end %>
+</div>
