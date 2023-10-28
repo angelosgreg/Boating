@@ -1,8 +1,9 @@
+<div class ="new_boat_form">
 <%= simple_form_for(@boat) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs" style="width: 1000px;">
+  <div class="form-inputs" style="width: 700px;">
     <%= f.input :name, placeholder: "Enter boat name" %>
     <%= f.input :description, placeholder: "Enter description" %>
     <%= f.input :capacity, placeholder: "Enter max boat capacity" %>
@@ -15,3 +16,4 @@
     <%= f.button :submit, class: "lrg-blue-btn" %>
   </div>
 <% end %>
+</div>
