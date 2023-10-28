@@ -2,7 +2,7 @@
 <div class="row">
     <% @skippers.each do |skipper| %>
     <div class="col-md-4">
-      <div class="skipper-card">
+      <div class="skipper-card", style="border: solid blue">
       <%= cl_image_tag skipper.photo.key, height: 180, width: 320, crop: :fill,position: :center %>
          <div class="skipper-card-content">
             <h4><%= link_to skipper.firstname, skipper_path(skipper), class: 'skipper-card-title' %></h4>
