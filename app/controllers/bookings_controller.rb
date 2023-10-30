@@ -14,13 +14,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.boat = @boat
-
-
-
-
     if @booking.save!
       redirect_to bookings_path
-      amount = @booking.boat.price * (@booking.checkout - @booking.checkin).to_i
     else
       render :new, status: :unprocessable_entity
     end
@@ -52,7 +47,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:id,:checkin, :checkout,:total)
+    params.require(:booking).permit(:id,:checkin, :checkout)
   end
 
   def set_boat
