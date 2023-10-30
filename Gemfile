@@ -25,7 +25,7 @@ gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-gem "dotenv-rails", groups: [:development, :test]
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem "cloudinary"
@@ -48,7 +48,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
-
+gem 'flatpickr'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
