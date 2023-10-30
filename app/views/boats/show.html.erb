@@ -6,6 +6,7 @@
               <p style="height: 60px; overflow: hidden;"><%= @boat.location%></p>
               <p style="height: 60px;  overflow: hidden;"><%= @boat.price%>€</p>
               <%= link_to "update boat", edit_boat_path(@boat), class: "lrg-blue-btn"  %>
+              <%= link_to "book", new_boat_booking_path(@boat), class: "lrg-blue-btn"  %>
               <%= button_to "Delete boat", @boat, class: "lrg-blue-btn", method: :delete %>
 
 </div>
