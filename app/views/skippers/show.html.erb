@@ -6,5 +6,6 @@
               <p style="height: 60px;  overflow: hidden;"><%= @skipper.money%>€</p>
               <%= link_to "update skipper", edit_skipper_path(@skipper), class: "lrg-blue-btn"  %>
               <%= button_to "Delete skipper", @skipper, class: "lrg-blue-btn", method: :delete %>
+              <%= link_to "book", new_skipper_reservation_path(@skipper), class: "lrg-blue-btn"  %>
 
 </div>
