@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :reservations, only:[:new,:create]
   end
   resources :bookings ,only: [:edit,:destroy,:update,:index]
+  resources :reservations,only: [:edit,:destroy,:update,:index]
   # Defines the root path route ("/")
   # root "articles#index"
 end
