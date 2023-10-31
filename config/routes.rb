@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only:[:new,:create]
   end
   resources :skippers do
-    resources :bookings, only:[:new,:create]
+    resources :reservations, only:[:new,:create]
   end
   resources :bookings ,only: [:edit,:destroy,:update,:index]
   # Defines the root path route ("/")
