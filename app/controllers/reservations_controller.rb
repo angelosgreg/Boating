@@ -14,7 +14,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     @reservation.skipper = @skipper
-    if @Reservation.save!
+    if @reservation.save!
       redirect_to reservations_path
     else
       render :new, status: :unprocessable_entity
@@ -47,7 +47,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:id,:checkin, :checkout)
+    params.require(:reservation).permit(:id,:start_date, :end_date)
   end
 
   def set_boat
