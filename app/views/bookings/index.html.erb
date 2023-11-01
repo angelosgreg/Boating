@@ -1,3 +1,5 @@
 <% @bookings.each do |booking| %>
+ <%= cl_image_tag booking.boat.image.key, height: 180, width: 320, crop: :fill,position: :center %>
 <%= booking.checkin %>
+<%= booking.checkout %>
 <% end %>
