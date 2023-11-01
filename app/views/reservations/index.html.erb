@@ -1,3 +1,5 @@
 <% @reservations.each do |reservation| %>
+ <%= cl_image_tag reservation.skipper.photo.key, height: 180, width: 320, crop: :fill,position: :center %>
 <%= reservation.start_date %>
+<%= reservation.end_date %>
 <% end %>
