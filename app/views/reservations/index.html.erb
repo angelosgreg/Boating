@@ -1,6 +1,14 @@
-<% @reservations.each do |reservation| %>
- <%= cl_image_tag reservation.skipper.photo.key, height: 180, width: 320, crop: :fill,position: :center %>
-<%= reservation.start_date %>
-<%= reservation.end_date %>
-<%= link_to "Delete",reservation_path(reservation),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
-<% end %>
+<div class="row">
+  <% @reservations.each do |reservation| %>
+    <div class="col-md-4">
+        <div class="booking-card", style="border: solid blue">
+            <%= cl_image_tag reservation.skipper.photo.key, height: 180, width: 320, crop: :fill,position: :center %>
+            <div class="reservation-card-content">
+              <%= reservation.start_date %>
+              <%= reservation.end_date %>
+              <%= link_to "Delete",reservation_path(reservation),data: {turbo_method: "delete"}, class: "lrg-blue-btn" %>
+            </div>
+        </div>
+    </div>
+  <% end %>
+</div>
