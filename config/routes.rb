@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+  get 'all', to: 'pages#all'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :boats do
     resources :bookings, only:[:new,:create]
