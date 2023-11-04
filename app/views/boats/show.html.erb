@@ -1,10 +1,10 @@
 <div style="width:400px; margin:0 auto; border: solid blue;", class = "show-card">
         <%= cl_image_tag @boat.image.key, height: 200, width: 395, crop: :fill,position: :center %>
-              <p style="height: 60px; overflow: hidden;"><%= @boat.name%></p>
+              <p style="height: 60px; overflow: hidden;font-size :30px"><%= @boat.name%></p>
               <p style="height: 60px; overflow: hidden;"><%= @boat.description%></p>
               <p style="height: 60px; overflow: hidden;"><%= @boat.capacity%></p>
               <p style="height: 60px; overflow: hidden;"><%= @boat.location%></p>
-              <p style="height: 60px;  overflow: hidden;"><%= @boat.price%>€</p>
+              <p style="height: 60px;  overflow: hidden;font-size :30px"><%= @boat.price%>€</p>
               <%= link_to "update boat", edit_boat_path(@boat), class: "lrg-blue-btn"  %>
               <%= link_to "book", new_boat_booking_path(@boat), class: "lrg-blue-btn"  %>
               <%= button_to "Delete boat", @boat, class: "lrg-blue-btn", method: :delete %>
